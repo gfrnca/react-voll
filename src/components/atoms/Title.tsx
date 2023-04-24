@@ -1,4 +1,8 @@
+// General
 import styled from "styled-components";
+
+// Assets
+import rating from "../../assets/icons/avaliacao.png";
 
 interface Props {
   imagem?: string;
