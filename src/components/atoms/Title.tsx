@@ -2,23 +2,52 @@
 import styled from "styled-components";
 
 // Assets
-import rating from "../../assets/icons/avaliacao.png";
+import rating from "../../assets/icons/rating.png";
+import graphic from "../../assets/icons/graphic.png";
+import conference from "../../assets/icons/conference.png";
 
 interface Props {
-  imagem?: string;
+  image?: string;
   children?: React.ReactNode;
 }
 
-interface IImagens {
+interface IImages {
   rating: string;
+  graphic: string;
+  conference: string;
 }
 
-const Title = ({ imagem, children }: Props) => {
+const IconSpan = styled.span<Props>`
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 25px;
+  height: 25px;
+  background-image: ${(props) =>
+    props.image ? `url(${props.image})` : "none"};
+`;
+
+const IconTitle = styled.h2`
+  color: var(--light-blue);
+`;
+
+const Container = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+const Title = ({ image, children }: Props) => {
+  const assetsList: IImages = {
+    rating: rating,
+    graphic: graphic,
+    conference: conference,
+  };
+
   return (
-    <div>
-      <span />
-      <h2>{children}</h2>
-    </div>
+    <Container>
+      {image && <IconSpan image={assetsList[image as keyof IImages]} />}
+      <IconTitle>{children}</IconTitle>
+    </Container>
   );
 };
 

@@ -4,7 +4,7 @@ import { LinkAnchor } from "../../atoms/Link";
 
 // Assets
 import vollLogo from "../../../assets/brand/logo.png";
-import profileAsset from "../../../assets/icons/perfil.png";
+import profileAsset from "../../../assets/icons/profile.png";
 
 const Header = () => {
   return (
