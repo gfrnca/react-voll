@@ -3,8 +3,8 @@ import { HeaderWrapper } from "./Header.styled";
 import { LinkAnchor } from "../../atoms/Link";
 
 // Assets
-import vollLogo from "../../../assets/logo.png";
-import profileAsset from "../../../assets/perfil.png";
+import vollLogo from "../../../assets/brand/logo.png";
+import profileAsset from "../../../assets/icons/perfil.png";
 
 const Header = () => {
   return (
