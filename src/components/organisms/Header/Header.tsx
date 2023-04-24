@@ -1,5 +1,6 @@
 // Styled Components
 import { HeaderWrapper } from "./Header.styled";
+import { LinkAnchor } from "../../atoms/Link";
 
 // Assets
 import vollLogo from "../../../assets/logo.png";
@@ -10,9 +11,9 @@ const Header = () => {
     <HeaderWrapper>
       <img src={vollLogo} alt="Voll" />
 
-      <div>
+      <div className="links">
         <img src={profileAsset} alt="Perfil" />
-        <a href="#">Sair</a>
+        <LinkAnchor href="#">Sair</LinkAnchor>
       </div>
     </HeaderWrapper>
   );
